@@ -13,10 +13,8 @@
 
 
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-## DAEMON=/usr/bin/redis-server
-## DAEMON_ARGS=/etc/redis/redis.conf
-DAEMON=/usr/local/redis/bin/redis-server
-DAEMON_ARGS=/usr/local/redis/etc/redis.conf
+DAEMON=/usr/local/bin/redis-server
+DAEMON_ARGS=/etc/redis.conf
 NAME=redis-server
 DESC=redis-server
 PIDFILE=/var/run/redis.pid
