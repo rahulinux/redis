@@ -17,8 +17,7 @@ CMD=$1
 
 start() {
         echo "Starting $NAME ..."
-        exec 2>&1 $BIN $SENTINEL_CONF --sentinel | logger -t sentinel &
-        echo $! > "${SENTINEL_PID}";
+        ( exec 2>&1 $BIN $SENTINEL_CONF --sentinel & echo $! > "${SENTINEL_PID}") | logger -t sentinel  &
 }
 
 stop() {
